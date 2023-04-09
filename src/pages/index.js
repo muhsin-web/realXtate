@@ -14,7 +14,7 @@ const Banner = ({purpose, imageUrl, buttonText, desc1, desc2, title, title2, lin
     {/* <Image src={imageUrl} width={500} height={200} alt="banner" /> */}
     <Flex p="20" flexDirection="column" justifyContent="center" bgColor="whiteAlpha.700" borderRadius="15">
       <Text color="grey.500" fontSize="sm" fontWeight="medium">{purpose}</Text>
-      <Text fontSize="3xl" lineHeight="1.5" fontWeight="bold">{title} <br /> {title2}</Text>
+      <Text fontSize="3xl" lineHeight="1" fontWeight="bold">{title} <br /> {title2}</Text>
       <Text fontSize="lg" paddingTop="3" paddingBottom="3" color="grey.700">{desc1} <br /> {desc2}</Text>
 
       <Button rightIcon={<AiOutlineRight />} bg="blue.300" w="fit-content" fontSize="xl" color="white">
@@ -39,7 +39,7 @@ export default function Home({propertyForSale, propertyForRent}) {
         imageUrl="url(https://bayut-production.s3.eu-central-1.amazonaws.com/image/145426814/33973352624c48628e41f2ec460faba4)"
       />
 
-      <Flex flexWrap="wrap" rowGap="50px">
+      <Flex flexWrap="wrap" justifyContent="center" alignItems="center" rowGap="50px">
           {propertyForRent.map((property) => <Property property={property} key={property.id}/>)}
       </Flex>
 
@@ -54,7 +54,7 @@ export default function Home({propertyForSale, propertyForRent}) {
         imageUrl="url(https://bayut-production.s3.eu-central-1.amazonaws.com/image/110993385/6a070e8e1bae4f7d8c1429bc303d2008)"
       />
 
-<Flex flexWrap="wrap" rowGap="50px">
+<Flex flexWrap="wrap" rowGap="50px" justifyContent="center" alignItems="center">
           {propertyForSale.map((property) => <Property property={property} key={property.id}/>)}
       </Flex>
 

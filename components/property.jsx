@@ -10,7 +10,7 @@ import {DefaultImage} from "../assests/images/default.png"
 const  Property = ({property: {coverPhoto, price, rentFrequency, rooms, title, baths, area, agency, isVerified, externalID}}) => {
 
      return(
-          <Link href={`/property/${externalID}`} passHref>
+          <Link href={`/property/${externalID}`} style={{}} passHref>
                <Flex flexWrap="wrap" w="420px" p="5" paddingTop="0" justifyContent="flex-start" cursor="pointer">
                     <Box>
                          <Image src={coverPhoto ? coverPhoto.url: DefaultImage} width={420} alt="property" height={100}/>
@@ -30,9 +30,9 @@ const  Property = ({property: {coverPhoto, price, rentFrequency, rooms, title, b
                          <Flex alignItems='center' p='1' justifyContent='space-between' w='250px' color="blue.400">
                               {rooms} <FaBed /> {baths} <FaBath /> | {millify(area)} sqrt <BsGridFill/> 
                          </Flex>
-                         <Box fontSize='md'>
+                         <Text fontSize='lg'>
                               {title.length > 35 ? `${title.substring(0,37)}...` : `${title}`}
-                         </Box>
+                         </Text>
                     </Box>
                </Flex>
           </Link>
