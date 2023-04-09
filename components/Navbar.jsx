@@ -10,9 +10,9 @@ import Logo from '../assests/images/logo.png'
 
 const Navbar = () => {
   return (
-          <Flex p='2' borderBottom='1px' borderColor="gray.100">
+          <Flex p='2' height="60px" justifyContent='center' borderBottom='1px' borderColor="gray.500" alignItems='center'>
                <Box fontSize="3xl" color="blue.400" fontWeight='bold'>
-                    <Link href='/' paddingLeft="2"><Image src = {Logo} alt= "logo"/></Link>
+                    <Link href='/' paddingLeft="2"><Image width={100}  sizes="(max-width: 500px) 50px, (max-width: 1023px) 100px, 200px" src = {Logo} alt= "logo"/></Link>
                </Box>
 
                <Spacer/>
